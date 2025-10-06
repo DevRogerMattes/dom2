@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domius - Sua Máquina de Vendas Digital</title>
+  <link href="/public/favicon.ico" rel="icon">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', Arial, sans-serif; background: #f8fafc; margin: 0; }
+    .header { background: #0ea5e9; color: #fff; padding: 32px 0; text-align: center; }
+    .header h1 { font-size: 2.5rem; margin-bottom: 8px; font-weight: 700; }
+    .header p { font-size: 1.2rem; margin-bottom: 0; }
+    .section { max-width: 900px; margin: 48px auto; background: #fff; border-radius: 16px; box-shadow: 0 2px 16px #0001; padding: 40px 24px; }
+    .section h2 { color: #10b981; font-size: 2rem; margin-bottom: 16px; }
+    .section p { color: #334155; font-size: 1.1rem; margin-bottom: 24px; }
+    .benefits { display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; margin-bottom: 32px; }
+    .benefit { flex: 1 1 240px; background: #f0fdf4; border-radius: 12px; padding: 24px; text-align: center; }
+    .benefit svg { margin-bottom: 12px; }
+    .cta { text-align: center; margin: 48px 0; }
+    .cta-btn { background: linear-gradient(90deg,#0ea5e9 0%,#10b981 100%); color: #fff; font-weight: 700; padding: 18px 40px; border-radius: 8px; font-size: 1.3rem; border: none; cursor: pointer; transition: background .2s; }
+    .cta-btn:hover { background: #10b981; }
+    .testimonials { background: #f0fdf4; padding: 32px 0; border-radius: 16px; margin-bottom: 32px; }
+    .testimonial { max-width: 600px; margin: 0 auto 32px; font-style: italic; color: #334155; }
+    .testimonial strong { color: #0ea5e9; }
+    .footer { background: #0ea5e9; color: #fff; text-align: center; padding: 24px 0; margin-top: 48px; }
+    @media (max-width: 900px) { .section { padding: 24px 8px; } .benefits { flex-direction: column; align-items: center; } .benefit { max-width: 90vw; } }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Domius</h1>
+    <p>Sua Máquina de Vendas Digital com Inteligência Artificial</p>
+  </div>
+
+  <div class="section">
+    <h2>Transforme seu Marketing Digital</h2>
+    <p>Domius é a plataforma definitiva para quem quer vender mais, automatizar processos e criar conteúdos que convertem. Com tecnologia de IA, você monta funis, páginas, e-mails e campanhas em minutos, sem depender de agências ou freelancers.</p>
+    <div class="benefits">
+      <div class="benefit">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#10b981"/><path d="M12 8v4l3 2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Automação Inteligente</h3>
+        <p>Monte workflows visuais conectando agentes de IA para criar tudo que sua estratégia precisa.</p>
+      </div>
+      <div class="benefit">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="8" fill="#0ea5e9"/><path d="M8 12h8M12 8v8" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+        <h3>Resultados Rápidos</h3>
+        <p>Templates prontos para vendas, copywriting, páginas e e-mails. Ganhe tempo e foque no que importa.</p>
+      </div>
+      <div class="benefit">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#f59e42"/><path d="M12 7v10M7 12h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+        <h3>Integração com OpenAI</h3>
+        <p>Use GPT para gerar textos, headlines, imagens e muito mais. Basta configurar sua chave de API.</p>
+      </div>
+    </div>
+    <div class="cta">
+      <h2>Pronto para vender mais?</h2>
+      <a href="mailto:contato@domius.com?subject=Quero%20Domius"><button class="cta-btn">Quero Domius!</button></a>
+    </div>
+    <div class="testimonials">
+      <div class="testimonial">
+        "Domius me ajudou a criar campanhas completas em menos de 1 hora. Recomendo para todo empreendedor!"<br>
+        <strong>- Juliana M., Especialista em Marketing</strong>
+      </div>
+      <div class="testimonial">
+        "A automação e os templates prontos me deram liberdade para focar só nas vendas. Simplesmente incrível!"<br>
+        <strong>- Rafael S., Infoprodutor</strong>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    &copy; 2025 Domius. Todos os direitos reservados.
+  </footer>
+</body>
+</html>

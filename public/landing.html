@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domius - Automatize seu Marketing Digital</title>
+  <link href="/public/favicon.ico" rel="icon">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="/src/index.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', Arial, sans-serif; background: #f8fafc; margin: 0; }
+    .hero { background: linear-gradient(90deg,#0ea5e9 0%,#10b981 100%); color: #fff; padding: 48px 0 32px; text-align: center; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 16px; font-weight: 700; }
+    .hero p { font-size: 1.25rem; margin-bottom: 32px; }
+    .cta-btn { background: #fff; color: #0ea5e9; font-weight: 700; padding: 16px 32px; border-radius: 8px; font-size: 1.25rem; border: none; cursor: pointer; transition: background .2s; }
+    .cta-btn:hover { background: #e0f2fe; }
+    .features { display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; margin: 48px 0; }
+    .feature { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 32px; max-width: 320px; flex: 1 1 280px; }
+    .feature h3 { color: #0ea5e9; margin-bottom: 12px; font-size: 1.2rem; }
+    .feature p { color: #334155; font-size: 1rem; }
+    .testimonials { background: #fff; padding: 48px 0; text-align: center; }
+    .testimonial { max-width: 500px; margin: 0 auto 32px; font-style: italic; color: #334155; }
+    .testimonial strong { color: #10b981; }
+    .footer { background: #0ea5e9; color: #fff; text-align: center; padding: 24px 0; margin-top: 48px; }
+    @media (max-width: 800px) { .features { flex-direction: column; align-items: center; } .feature { max-width: 90vw; } }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Marketing Digital" style="width:100%;max-width:600px;border-radius:16px;box-shadow:0 4px 24px #0002;margin-bottom:24px;" />
+    <h1>Domius - Automatize seu Marketing Digital</h1>
+    <p>Crie, conecte e execute agentes de IA para gerar conteúdos, funis de vendas, páginas e muito mais. Tudo em um só lugar, sem complicação!</p>
+    <a href="#comprar"><button class="cta-btn">Quero Domius!</button></a>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" style="margin-bottom:12px;"><circle cx="12" cy="12" r="10" fill="#10b981"/><path d="M12 8v4l3 2" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="#fff" stroke-width="2"/></svg>
+      <h3>Automação Total</h3>
+      <p>Monte workflows inteligentes conectando agentes de IA para criar conteúdos, páginas, e-mails e funis completos em minutos.</p>
+    </div>
+    <div class="feature">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Resultados" style="width:48px;height:48px;margin-bottom:12px;" />
+      <h3>Foco em Resultados</h3>
+      <p>Domius foi criado para aumentar sua produtividade e conversão, com templates prontos e personalizáveis para vendas.</p>
+    </div>
+    <div class="feature">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" style="margin-bottom:12px;"><circle cx="12" cy="12" r="10" fill="#0ea5e9"/><path d="M7 12h10M12 7v10" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+      <h3>Interface Visual</h3>
+      <p>Arraste, conecte e configure agentes de IA em um canvas intuitivo. Visualize todo o fluxo do seu marketing digital.</p>
+    </div>
+    <div class="feature">
+  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" style="margin-bottom:12px;"><circle cx="12" cy="12" r="10" fill="#0ea5e9"/><path d="M12 7v10M7 12h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+  <h3>Integração com OpenAI</h3>
+  <p>Use modelos GPT para gerar textos, headlines, copy, imagens e muito mais. Basta configurar sua chave de API.</p>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="testimonial">
+      "O Domius revolucionou meu processo de vendas. Em poucos minutos, montei um funil completo e já estou vendo resultados!"<br>
+      <strong>- Ana Souza, Copywriter</strong>
+    </div>
+    <div class="testimonial">
+      "Nunca foi tão fácil criar páginas e conteúdos que convertem. Recomendo para todo empreendedor digital!"<br>
+      <strong>- Carlos Lima, Infoprodutor</strong>
+    </div>
+  </section>
+
+  <section id="comprar" class="hero" style="background: linear-gradient(90deg,#10b981 0%,#0ea5e9 100%);">
+    <h2>Garanta já o seu Domius!</h2>
+    <p>Transforme seu marketing digital com automação e IA. Clique abaixo para comprar:</p>
+    <a href="mailto:contato@domius.com?subject=Quero%20comprar%20Domius"><button class="cta-btn">Comprar Agora</button></a>
+  </section>
+
+  <footer class="footer">
+    &copy; 2025 Domius. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
