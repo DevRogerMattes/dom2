@@ -1,9 +1,12 @@
 # Dockerfile para o Backend (Node/TS)
+
+# Dockerfile para o Backend (Node/TS) - Clona do GitHub
 FROM node:20-alpine AS build
 WORKDIR /app
-COPY package.json package-lock.json ./
+# Clona o repositório diretamente
+RUN apk add --no-cache git \
+	&& git clone --branch main https://github.com/DevRogerMattes/dom2.git .
 RUN npm ci
-COPY . .
 RUN npm run build
 
 FROM node:20-alpine AS production

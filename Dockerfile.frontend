@@ -1,9 +1,12 @@
 # Dockerfile para o Frontend (Vite/React)
+
+# Dockerfile para o Frontend (Vite/React) - Clona do GitHub
 FROM node:20-alpine AS build
 WORKDIR /app
-COPY package.json package-lock.json ./
+# Clona o repositório diretamente
+RUN apk add --no-cache git \
+	&& git clone --branch main https://github.com/DevRogerMattes/dom2.git .
 RUN npm ci
-COPY . .
 RUN npm run build
 
 # Servir arquivos estáticos

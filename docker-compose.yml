@@ -28,8 +28,8 @@ services:
     ports:
       - "3001:3001"
     environment:
-      - DATABASE_URL=postgres://usuario:senha@postgres:5432/nome_do_banco
-      - STRIPE_SECRET_KEY=
+      - DATABASE_URL=postgres://domius_user:senha_forte@postgres:5432/domius_db
+      - STRIPE_SECRET_KEY=sk_live_sua_stripe_secret_key
     depends_on:
       - postgres
     restart: always
@@ -40,9 +40,9 @@ services:
     networks:
       - DomiusNet
     environment:
-      POSTGRES_DB: nome_do_banco
-      POSTGRES_USER: usuario
-      POSTGRES_PASSWORD: senha
+      POSTGRES_DB: domius_db
+      POSTGRES_USER: domius_user
+      POSTGRES_PASSWORD: senha_forte
     volumes:
       - pgdata:/var/lib/postgresql/data
     ports:
