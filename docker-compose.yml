@@ -6,48 +6,39 @@ networks:
 
 services:
   frontend:
-    build:
-      context: .
-      dockerfile: Dockerfile.frontend
-    container_name: domius-frontend
+    image: domius-frontend:latest # Gere e envie esta imagem para o Docker Hub ou crie localmente
     networks:
       - DomiusNet
     ports:
       - "80:80"
     depends_on:
       - backend
-    restart: always
 
   backend:
-    build:
-      context: .
-      dockerfile: Dockerfile.backend
-    container_name: domius-backend
+    image: domius-backend:latest # Gere e envie esta imagem para o Docker Hub ou crie localmente
     networks:
       - DomiusNet
     ports:
       - "3001:3001"
     environment:
-      - DATABASE_URL=postgres://domius_user:senha_forte@postgres:5432/domius_db
-      - STRIPE_SECRET_KEY=sk_live_sua_stripe_secret_key
+      - DATABASE_URL=postgres://domius:rGr#2291755@postgres:5432/domius_db
+      - STRIPE_SECRET_KEY=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
+      - STRIPE_PUBLISHABLE_KEY=pk_live_51S9bKtFMpUqhOvgtEW9H4MFHcYGF5mqwRwmX8dfREAHrne4VApk0J5JjCMiyAB1LeXxec9UJvSGFPD8OE5tP0XaL00xle5BC3O
     depends_on:
       - postgres
-    restart: always
 
   postgres:
     image: postgres:15
-    container_name: domius-postgres
     networks:
       - DomiusNet
     environment:
       POSTGRES_DB: domius_db
-      POSTGRES_USER: domius_user
-      POSTGRES_PASSWORD: senha_forte
+      POSTGRES_USER: domius
+      POSTGRES_PASSWORD: rGr#2291755
     volumes:
       - pgdata:/var/lib/postgresql/data
     ports:
       - "5432:5432"
-    restart: always
 
 volumes:
   pgdata:
