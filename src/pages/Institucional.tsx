@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Play, ArrowRight, Check, Star, Users, Zap, Target, TrendingUp, Shield, Clock, ChevronDown, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { loadStripe } from '@stripe/stripe-js';
+import { buildApiUrl } from '../config/api';
 
 // Definir o tipo SubscriptionPlan localmente
 interface SubscriptionPlan {
@@ -43,7 +44,7 @@ function Institucional() {
   useEffect(() => {
     async function loadPlans() {
       try {
-        const response = await fetch('http://localhost:3001/api/subscription-plans');
+        const response = await fetch(buildApiUrl('subscription-plans'));
         if (!response.ok) {
           throw new Error('Failed to fetch plans');
         }
@@ -84,7 +85,7 @@ function Institucional() {
       });
 
       // Criar sessão de checkout no backend primeiro
-      const response = await fetch('http://localhost:3001/api/stripe/create-public-session', {
+      const response = await fetch(buildApiUrl('stripe/create-public-session'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

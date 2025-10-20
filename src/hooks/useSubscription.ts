@@ -1,6 +1,7 @@
 // src/hooks/useSubscription.ts
 import { useState, useEffect, useCallback } from 'react';
 import { useAuth } from '../contexts/AuthContext';
+import { buildApiUrl } from '../config/api';
 
 export interface SubscriptionPlan {
   id: string;
@@ -41,7 +42,7 @@ export const useSubscription = () => {
   const fetchPlans = useCallback(async () => {
     try {
       console.log('🔄 Buscando planos...');
-      const response = await fetch('http://localhost:3001/api/subscription-plans');
+      const response = await fetch(buildApiUrl('subscription-plans'));
       if (!response.ok) {
         throw new Error('Erro ao buscar planos');
       }
@@ -62,7 +63,7 @@ export const useSubscription = () => {
     
     try {
       console.log('🔄 Buscando assinatura do usuário:', user.id);
-      const response = await fetch(`http://localhost:3001/api/user-subscription/${user.id}`);
+      const response = await fetch(buildApiUrl(`user-subscription/${user.id}`));
       if (response.ok) {
         const data = await response.json();
         console.log('✅ Assinatura encontrada:', data);
@@ -86,7 +87,7 @@ export const useSubscription = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:3001/api/user-subscription', {
+      const response = await fetch(buildApiUrl('user-subscription'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

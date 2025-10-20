@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 // Removido Supabase. Usuário será um objeto simples.
+import { buildApiUrl } from '../config/api';
 
 interface AuthContextType {
   user: any | null; // Pode ser adaptado conforme o backend
@@ -42,7 +43,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const signIn = async (email: string, password: string) => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:3001/api/auth/login', {
+      const response = await fetch(buildApiUrl('auth/login'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
@@ -69,7 +70,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const signUp = async (email: string, password: string) => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:3001/api/auth/register', {
+      const response = await fetch(buildApiUrl('auth/register'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
@@ -93,7 +94,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const signOut = async () => {
     setLoading(true);
     try {
-      await fetch('http://localhost:3001/api/auth/logout', { method: 'POST' });
+      await fetch(buildApiUrl('auth/logout'), { method: 'POST' });
       setUser(null);
       localStorage.removeItem('auth-user');
       setLoading(false);
@@ -114,7 +115,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     console.log('ID do usuário:', user.id); // Verificar se o ID do usuário está correto
 
     try {
-      const response = await fetch(`http://localhost:3001/api/users/${user.id}/theme`, {
+      const response = await fetch(buildApiUrl(`users/${user.id}/theme`), {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ theme })

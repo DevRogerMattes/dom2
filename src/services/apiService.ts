@@ -64,7 +64,7 @@ export const apiService = {
    */
   put: async (url: string, body: any) => {
     try {
-      const fullUrl = url.startsWith('http') ? url : `http://localhost:3001${url.startsWith('/') ? url : '/' + url}`;
+      const fullUrl = url.startsWith('http') ? url : `https://www.domius.com.br${url.startsWith('/') ? url : '/' + url}`;
       const response = await fetch(fullUrl, {
         method: 'PUT',
         headers: {
@@ -85,7 +85,7 @@ export const apiService = {
    */
   delete: async (url: string) => {
     try {
-      const fullUrl = url.startsWith('http') ? url : `http://localhost:3001${url.startsWith('/') ? url : '/' + url}`;
+      const fullUrl = url.startsWith('http') ? url : `https://www.domius.com.br${url.startsWith('/') ? url : '/' + url}`;
       const response = await fetch(fullUrl, {
         method: 'DELETE',
         headers: {
@@ -107,7 +107,7 @@ export const apiService = {
    */
   get: async (url: string) => {
     try {
-      const fullUrl = url.startsWith('http') ? url : `http://localhost:3001${url.startsWith('/') ? url : '/' + url}`;
+      const fullUrl = url.startsWith('http') ? url : `https://www.domius.com.br${url.startsWith('/') ? url : '/' + url}`;
       const response = await fetch(fullUrl, {
         method: 'GET',
         headers: {
@@ -127,7 +127,7 @@ export const apiService = {
    */
   post: async (url: string, body: any) => {
     try {
-      const fullUrl = url.startsWith('http') ? url : `http://localhost:3001${url.startsWith('/') ? url : '/' + url}`;
+      const fullUrl = url.startsWith('http') ? url : `https://www.domius.com.br${url.startsWith('/') ? url : '/' + url}`;
       const response = await fetch(fullUrl, {
         method: 'POST',
         headers: {

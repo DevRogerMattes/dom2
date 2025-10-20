@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
+import { buildApiUrl } from '../config/api';
 
 interface Product {
   id_produto: string;
@@ -29,7 +30,7 @@ export const ProdutosCriados: React.FC = () => {
       console.log('ID do usuário:', user.id);
 
       try {
-        const url = `http://localhost:3001/api/products?user_id=${user.id}`;
+        const url = buildApiUrl(`products?user_id=${user.id}`);
         console.log('Fazendo requisição para:', url);
         
         const response = await fetch(url);
